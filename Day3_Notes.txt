@@ -1,0 +1,160 @@
+1 solution ---- M projects
+solution is composed of UI and Logic
+
+
+Solution Name:HRMS 
+Project Name:HRConsoleApp(User Interface)---ConsoleApplication
+BusinessLogicLayer:Logic of the application(ClassLibrary.dll)---Reusability feature without repeating the code
+
+How to create the dll?
+1) create a class library project
+2) write the code
+3)build the code/library---> u will get (.dll)
+
+
+**App(UI) is dependent on the (Class Library)logic
+1) dll ---> App can use the code, by adding reference of the dll in the app.
+2) all methods must be public.
+
+
+
+2 projects
+
+app         library
+Main         logic-->compile the library
+
+				
+
+In my library, I am going to add a class and write functionalities for calculator.
+-----------------------------------------------------------------------------------
+Assemblies:output unit/basic unit of deployment/version info/MSIL
+Exe/Dll
+App/Library
+
+1) Private 
+
+2) Public/Shared: A single .dll ---- multiple projects-----
+*)Sign the assembly and give rights to be used
+*) It doesn't create copies of itself when it is public,
+*) Instead it is shared from the GAC(Global Assembly Cache) folder.
+A public key token is generated and that is used by the assemby/s who want to the class library.
+One Class library can be used by another class library.
+Global Assembly Cache Location: C:\Windows\assembly
+
+
+3) Satellite: Language assemblies are a good example of Satellite Assemblies.
+Localisation: locale/Karnataka----Kannada
+Globalisation: WeekDays/Dates/Months/Currency/
+
+
+App---- English----> applicationform.en-us.cs
+        Hindi------>applicationform.hi-in.cs
+	Marathi-----> applicationform.mr-in.cs
+	Punjabi
+---------------------------------------------------------------------------------------------
+
+Object Oriented Programming
+---------------------------
+
+What is OOP?
+Object Oriented Programming.
+Paradigm/way of working with problems.
+It divides the program into smaller parts and we refer them as object.
+Pre-defined template to store the object data, pre-defined object template : Class/BluePrint
+
+
+
+Employee:Class
+Empid Ename City  Edu  Age birthdate BasicSal TA  DA HRA ---characteristic
+
+AcceptData-----procedure
+DisplayDAta---procedure
+CalculateAge---procedure
+CalculateSalary---procedure
+
+
+
+PersonData
+multiple persons data, so we wnat to store separately.
+
+	p1      p2      p3
+Nmae:Ankita  Ashwini Gaurang
+ Age:  2        3	   5
+
+treat each person separately.
+
+Procedural Paradigm/Functional Programming: C Language
+It divides the programs into small chunks which we call them functions.
+
+
+4 major pillars of oops
+1)Abstraction:Hiding unnecessary things and  showing the relevant.
+Real World Example: Mobile calling feature
+		    Drive a car----> start/stop/gear etc.
+
+Achieve: Access Specifiers
+	public
+	private
+	internal
+	protected
+	protected internal
+
+2)Encapsulation: putting all thihgs related to each other in a single unit.
+Real World Example: Medicine Capsule
+Achieve: binding fields(state of the object) and the behaviour(method) together in a single unit(class).
+                      method acts on the data(variables/parameters)
+3)Polymorphism:  Multiple forms  of a method behaviour.
+	Poly --many / morphism----forms
+         Pay my Electricity bill: Cash/UPI/DebitCard/CreditCard
+
+Overloading
+Overriding
+
+4)Inheritance: Reuse the code 
+	Multiple Inheritance
+	Multi-Level Inheritance
+  Base-Parent/Derived---Child
+
+
+
+
+3 Minor Pillars
+1) Typecasting:
+2) Persistence: Storing--- File/Memory/Object/DB
+3) Concurrency: Multi-threading/Parallelism
+-----------------------------------------------------------------------
+
+
+					N1/Assembly
+				Class1      Class2
+
+private                           yes         no
+internal                          yes         yes    
+protected                         yes         yes,if it is inheriting class1 else no
+protected internal                yes         yes, if it is in same assembly and/or inherited class
+public                            yes         yes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
